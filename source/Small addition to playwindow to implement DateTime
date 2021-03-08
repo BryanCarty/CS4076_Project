@@ -1,0 +1,10 @@
+//Small addition to playwindow.cpp & playwindow.h to implement DateTime.
+//playwindow.h
+    QLabel *startDateTime;
+    DateTime *dateTime;
+
+//playwindow.cpp around line 94
+    startDateTime = new QLabel(this);
+    dateTime = new DateTime();
+    startDateTime->setText(dateTime->getStartDateTime());
+    m_layout->addWidget(startDateTime);
