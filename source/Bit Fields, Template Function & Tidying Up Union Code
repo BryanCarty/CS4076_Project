@@ -1,0 +1,19 @@
+//Note: I realised today that I already did bit structures in the Union code so that's another thing ticked off the list.
+
+//The following code is in relation to implementing the template function. I implemented it anyway even if we only need to know the definition cause its only a small bit of code and I figure it's better to be safe than sorry.
+//In battle.cpp add the following below includes:
+	
+	template <class sub>//template function
+	sub subtract(sub a, sub b){
+    		return a-b;
+	}
+
+//Then for the lines 35 and 38ish swap out the two subtractions for subtract(monHealth, playerStrength) and subtract(myHealth, monsterStrength) respectively.
+
+//Finally in relation to what I did in the union code I noticed it needed to be tidied up slightly so I added the following line to the spreadsheet:
+
+	"QRadioButton{color: %2;}"
+//and I moved
+	m_layout->addWidget(startDateTime); //on line 136 ish
+//to line 139 ish, below
+	m_layout->addWidget(weaponButton);
