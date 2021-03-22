@@ -1,0 +1,55 @@
+void ZorkUL::createRooms()  {
+    //This function creates all the rooms, objects and monsters in the game
+        Item *knife = new Item("Knife", true);
+        Item *sword = new Item("Sword", true);
+
+        Room *one, *two, *three, *four, *five, *six, *seven, *eight, *nine, *ten, *eleven, *twelve;
+        one = new Room("one");
+        two = new Room("two");
+        three = new Room("three");
+        four = new Room("four");
+        five = new Room("five");
+        six = new Room("six");
+        seven = new Room("seven");
+        eight= new Room("eight");
+        nine= new Room("nine");
+        ten= new Room("ten");
+        eleven= new Room("eleven");
+        twelve= new Room("twelve");
+
+        roomList.push_back(one);
+        roomList.push_back(two);
+        roomList.push_back(three);
+        roomList.push_back(four);
+        roomList.push_back(five);
+        roomList.push_back(six);
+        roomList.push_back(seven);
+        roomList.push_back(eight);
+        roomList.push_back(nine);
+        roomList.push_back(ten);
+        roomList.push_back(eleven);
+        roomList.push_back(twelve);
+        twelve -> setLast();
+
+        three->addItem(sword);
+        four->addItem(knife);
+        five->addMonster(new Monster("Small Monster", 6, .55));
+        six->addMonster(new Monster("Bigger Monster", 10, .75));
+
+                    //(up, left, down, right)
+        one->setExits(two, NULL, NULL, three);
+        two->setExits(eleven, NULL, one, three);
+        three->setExits(two, one, NULL, four);
+        four->setExits(NULL, three, five, six);
+        five->setExits(six, four, NULL, NULL);
+        six->setExits(eight, four, five, seven);
+        seven->setExits(NULL, eight, six, NULL);
+        eight->setExits(NULL, nine, six, seven);
+        nine->setExits(NULL, ten, eleven, eight);
+        ten->setExits(NULL, NULL, eleven, nine);
+        eleven->setExits(ten, NULL, two, twelve);
+        twelve->setExits(NULL, eleven, NULL, NULL);
+
+
+        currentRoom = one;
+}
