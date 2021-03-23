@@ -11,23 +11,18 @@ class MyException : public exception{
     public:
          bool validateText(QString toValidate) const throw()
         {
-            bool valid = false;
-            try {
+         bool valid = false;
 
-            QRegExp rx("[A-Za-z]*");
-            QRegExpValidator validator(rx, 0);
-            int pos = 0;
-            string validText;
+    QRegExp rx("[A-Za-z]*");
+    QRegExpValidator validator(rx, 0);
+    int pos = 0;
+    string validText;
 
-            if(validator.validate(toValidate, pos) && 0 != toValidate.compare("")) {
-                valid = true;
-
-            }
-            throw valid;
-        }
-            catch  (bool valid ){
-              return valid;
-        }
+    if(validator.validate(toValidate, pos) && 0 != toValidate.compare("")) {
+        valid = true;
+    }
+    return valid;
+  
 }
 };
 
