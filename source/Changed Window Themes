@@ -1,0 +1,21 @@
+//MainWindow.cpp in the first few lines of constructor
+    QString mainWindowStylesheet(
+         "QMainWindow{background-color: #171717;}"
+         "QPushButton{font-weight: bold; font-size: 22px;}"
+    );
+    setStyleSheet(mainWindowStylesheet);
+    
+//finalWindow.cpp in the first few lines of constructor
+    QString finalWindowStylesheet(
+        "QMainWindow{background-color: #171717;}"
+        "QPushButton{font-weight: bold; font-size: 60px;}"
+        "QLabel{color: #FFFFFF; font-weight:bold; font-size: 25px;}"
+    );
+    setStyleSheet(finalWindowStylesheet);
+    
+//charinfoWindow.cpp in the first few lines of constructor
+    QString charWindowStylesheet(
+        "QMainWindow{background-color: #171717;}"
+        "QLabel{color: #FFFFFF;}"
+    );
+    setStyleSheet(charWindowStylesheet);
