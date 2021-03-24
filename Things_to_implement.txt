@@ -1,8 +1,2 @@
-1. change theme of start window , character window and final window so that it matches the playwindow
-2. write  increaseHealth()  (probably in Item or playwindow ) so when an item is not a weapon and is picked up it increases health.
-3. change name , room ...etc. string colours from white  to red or diff colour so it stands out.
-4. 
-5. 
-6.
-7.
-8.
+1. edit code so that favourite food is the food that is placed in the game
+2. change name , room ...etc. string colours from white  to red or diff colour so it stands out
