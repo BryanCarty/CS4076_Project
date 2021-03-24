@@ -1,0 +1,25 @@
+//Bottom of includes:
+        #include <QMovie>
+  
+//Add to spreadsheet
+        "#fightScene{border: 3px solid #FFFFFF; background: gray;}"
+  
+//Around line 86 under map->setObjectName
+        fightScene = new QLabel(this);
+        fightScene->setGeometry(QRect(QPoint(575,360),QSize(180,180)));
+        fightScene->setObjectName("fightScene");
+        fightScene->hide();
+   
+ //Also on line 83 ish I changed position slightly to be inline with exit button
+        map->setGeometry(QRect(QPoint(575,130),QSize(180,180)));
+  
+//In first few lines of if statement in attackHandler
+        QMovie *movie=new QMovie(":/images/fight_avatar.gif");
+        fightScene->setMovie(movie);
+        movie->start();
+        fightScene->show();
+        
+//Around line 260 between attackButton->hide(); and monHealth->hide();
+        fightScene->hide();
+
+//Add gif "fight_avatar.gif" to /images
