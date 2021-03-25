@@ -1,2 +1,2 @@
-1. edit code so that favourite food is the food that is placed in the game
-2. change name , room ...etc. string colours from white  to red or diff colour so it stands out
+1. change name , room ...etc. string colours from white  to red or diff colour so it stands out
+2. Maybe implement a feature where instead of "end game " we have "Restart" so that it restarts the game. 
