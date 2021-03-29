@@ -1,0 +1,35 @@
+//Swap out the start of the playwindow.cpp constructor for the following code.
+
+    color4bTag color;
+    color.c = 0x00FFFF17;//initially setting colour to yellow.
+
+    //stylesheet
+    QString styleSheet(
+      "QMainWindow{background-image: url(:/images/background.jpg);}"
+      "QLabel{color: %1;}"
+      "QRadioButton{color:white; font-weight: bold;}"
+      "QGroupBox{color: rgb(227, 11, 11); font: Arial; font-weight: bold; }"
+      "QString{color: rgb(227, 11, 11); font: Arial; font-weight: bold; }"
+      "QToolBar QPushButton{font-size: 18px; font-weight: bold; margin-left:45px; margin-right:45px;}"
+      "QPushButton{font-weight: bold;}"
+      "QComboBox{font-size: 18px; font-weight: bold; margin-left:45px; margin-right:45px; padding-left: 3px; padding-right: 3px;}"
+      "QPushButton#quitButton{padding-left:8px; padding-right:8px;}"
+      "#monsterDead{font-size: 15px; font-weight: bold; color: rgb(227, 11, 11);}"
+      "#monHealth{font-size: 15px; font-weight: bold; color: rgb(227, 11, 11);}"
+      "#name{margin-left: 38px; font-size: 15px; font-weight: bold;}"
+      "#startDateTime{margin-left: 38px; font-size: 15px; font-weight: bold;}"
+      "#health{margin-left: 38px; font-size: 15px; font-weight: bold; color: rgb(52, 201, 26);}"
+      "#currIsland{margin-left: 38px; font-size: 15px; font-weight: bold; color: %2;}"
+      "#IslandDesc{margin-left: 38px; font-size: 15px; font-weight: bold;}"
+      "#map{border: 3px solid #FFFFFF;}"
+      "#fightScene{border: 3px solid #FFFFFF; background: gray;}"
+     );
+
+    //Setting and manipulating colours with use of union.
+    color.argb.b=0xFF;//change 'b' portion of the hexadecimal so colour is now white.
+    QString white = QColor(color.c).name();
+    color.c=0x0009FFEB;//changing colour to cyan
+    color.argb.g=0xCD;//change 'g' portion of hexadecimal so colour is now darker cyan
+    QString cyan = QColor(color.c).name();
+
+    setStyleSheet(styleSheet.arg(white, cyan));
