@@ -1,0 +1,5 @@
+///// in Zorkul.h add "#define NAME "Predator" under #includes 
+then under public add " Monster *monster = new Monster( NAME, 10, .75); "
+
+
+///////in ZORKUL.cpp around line 54 replace the four->addMonster(....) with four->addMonster(monster);
