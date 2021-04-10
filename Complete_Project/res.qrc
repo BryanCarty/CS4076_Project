@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>mapeight.png</file>
+        <file>mapeleven.png</file>
+        <file>mapfive.png</file>
+        <file>mapfour.png</file>
+        <file>mapnine.png</file>
+        <file>mapone.png</file>
+        <file>mapseven.png</file>
+        <file>mapsix.png</file>
+        <file>mapten.png</file>
+        <file>mapthree.png</file>
+        <file>maptwelve.png</file>
+        <file>maptwo.png</file>
+        <file>fight_avatar.gif</file>
+        <file>desert_island.gif</file>
+        <file>background.jpg</file>
+    </qresource>
+</RCC>
